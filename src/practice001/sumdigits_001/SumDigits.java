@@ -1,4 +1,4 @@
-package practice001.sumDigits;
+package practice001.sumdigits_001;
 
 public class SumDigits {
     public static int sum(int number) {

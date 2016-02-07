@@ -1,4 +1,4 @@
-package practice001.sumDigits;
+package practice001.sumdigits_001;
 
 public class Runner {
     public static void main(String[] args) {
