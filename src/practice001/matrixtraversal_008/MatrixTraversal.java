@@ -1,8 +1,5 @@
 package practice001.matrixtraversal_008;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class MatrixTraversal {
     public static int[] print(int[][] input) {
         int top = 0;
