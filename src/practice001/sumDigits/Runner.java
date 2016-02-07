@@ -1,6 +1,6 @@
-package practice001;
+package practice001.sumDigits;
 
-public class Practice001 {
+public class Runner {
     public static void main(String[] args) {
 
     }
