@@ -9,7 +9,7 @@ public class MatrixSnakeTraversal {
         int k = 0;
         for (int i = 0; i < input.length; i++) {
 
-                for (int j = 0; j < input[i].length; j++) {
+                for (int j = 0; j < input.length; j++) {
                     if ((i % 2) == 0) {
                         ret[k + j] = input[j][i];
                     } else {
