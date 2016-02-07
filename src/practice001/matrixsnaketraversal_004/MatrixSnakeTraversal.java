@@ -3,21 +3,16 @@ package practice001.matrixsnaketraversal_004;
 public class MatrixSnakeTraversal {
     public static int[] print(int[][] input) {
         int[] ret = new int[input.length * input[0].length];
-        System.out.println(ret.length);
-        System.out.println(input.length);
-        System.out.println(input[0].length);
-        int k = 0;
-        for (int i = 0; i < input.length; i++) {
-
-                for (int j = 0; j < input.length; j++) {
-                    if ((i % 2) == 0) {
-                        ret[k + j] = input[j][i];
+        int nrows = input.length;
+        int ncols = input[0].length;  // assuming rows of equal length
+        for (int col = 0; col < input[0].length; col++) {
+                for (int row = 0; row < input.length; row++) {
+                    if ((col % 2) == 0) {
+                        ret[col * nrows + row] = input[row][col];
                     } else {
-                        ret[k + j] = input[input[i].length - (j + 1)][i];
+                        ret[col * nrows + row] = input[nrows - row - 1][col];
                     }
-                    System.out.println(ret[k + j]);
                 }
-            k += input[i].length;
         }
         return ret;
     }
