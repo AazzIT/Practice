@@ -2,9 +2,9 @@ package practice001.firstoddnumber_003;
 
 public class FirstOddNumber {
     public static int find(int[] input) {
-        for (int i = 0; i < input.length; i++) {
-            if ((input[i] % 2) != 0) {
-                return i;
+        for (int indexOddNumber = 0; indexOddNumber < input.length; indexOddNumber++) {
+            if ((input[indexOddNumber] % 2) != 0) {
+                return indexOddNumber;
             }
         }
         return -1;
