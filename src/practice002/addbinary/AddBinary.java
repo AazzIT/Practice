@@ -5,7 +5,7 @@ import java.math.BigInteger;
 public class AddBinary {
     static String add(StringBuilder a, StringBuilder b) {
         if ((a.length() + b.length() > 2)) {
-            if ((a.charAt(0) == '0') && (b.charAt(0) == '0')) {
+            if (((int) a.charAt(0) == 48) && ((int) b.charAt(0) == 48)) {
                 return "0";
             }
         }
@@ -27,8 +27,9 @@ public class AddBinary {
 
     }
     static String add(String a, String b) {
+        System.out.println((int) a.charAt(0) + "  " + (int) b.charAt(0));
         if ((a.length() + b.length() > 2)) {
-            if ((a.charAt(0) == '0') && (b.charAt(0) == '0')) {
+            if (((int) a.charAt(0) == 48) && ((int) b.charAt(0) == 48)) {
                 return "0";
             }
         }
