@@ -4,13 +4,11 @@ import java.math.BigInteger;
 
 public class AddBinary {
     static String add(StringBuilder a, StringBuilder b) {
-        StringBuilder str = new StringBuilder();
-        str.append(a);
-        str.append(b);
-        if (str.toString().equals("00")) {
-            return "0";
+        if ((a.length() + b.length() > 2)) {
+            if ((a.charAt(0) == '0') && (b.charAt(0) == '0')) {
+                return "0";
+            }
         }
-
         BigInteger inta = new BigInteger(String.valueOf(a), 2);
         BigInteger intb = new BigInteger(String.valueOf(b), 2);
         BigInteger binary = inta.add(intb);
@@ -29,7 +27,11 @@ public class AddBinary {
 
     }
     static String add(String a, String b) {
-
+        if ((a.length() + b.length() > 2)) {
+            if ((a.charAt(0) == '0') && (b.charAt(0) == '0')) {
+                return "0";
+            }
+        }
         BigInteger inta = new BigInteger(String.valueOf(a), 2);
         BigInteger intb = new BigInteger(String.valueOf(b), 2);
         BigInteger binary = inta.add(intb);
