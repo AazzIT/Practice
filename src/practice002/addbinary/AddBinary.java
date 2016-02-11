@@ -10,6 +10,7 @@ public class AddBinary {
         if (str.toString().equals("00")) {
             return "0";
         }
+
         BigInteger inta = new BigInteger(String.valueOf(a), 2);
         BigInteger intb = new BigInteger(String.valueOf(b), 2);
         BigInteger binary = inta.add(intb);
@@ -27,7 +28,28 @@ public class AddBinary {
         return result;
 
     }
+    static String add(String a, String b) {
 
+        BigInteger inta = new BigInteger(String.valueOf(a), 2);
+        BigInteger intb = new BigInteger(String.valueOf(b), 2);
+        BigInteger binary = inta.add(intb);
+        BigInteger temp;
+        String result = "0";
+        while (binary.signum() != 0) {
+            temp = binary.mod(BigInteger.valueOf(2));
+            try {
+                result = temp + result;
+            } catch (Exception e) {
+                return result;
+            }
+            binary = binary.divide(BigInteger.valueOf(2));
+        }
+        if (result.equals("0")) {
+            return result;
+        }
+        return result.substring(0, result.length() - 1);
+
+    }
     /*
     static String add(StringBuilder a, StringBuilder b) {
         BigInteger inta = new BigInteger(String.valueOf(a), 2);
