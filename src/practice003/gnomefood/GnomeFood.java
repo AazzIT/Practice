@@ -5,53 +5,26 @@ import java.util.*;
 public class GnomeFood {
     public static int[] find(int[] gnomesHeight, int[] portion) {
         int[] result = new int[gnomesHeight.length];
-        Map<Integer, Integer> mapGnomesHeights = new TreeMap<>();
-        Map<Integer, Integer> mapPortions = new TreeMap<>();
-
+        Map mapGnomesPortions = new HashMap() {{}};
         for (int i = 0; i < gnomesHeight.length; i++) {
-            mapGnomesHeights.put(i, gnomesHeight[i]);
-            mapPortions.put(i, portion[i]);
+            mapGnomesPortions.put(i, gnomesHeight[i]);
         }
 
-        Comparator<Integer> compareGnomesHeight = (o1, o2) -> {
-            int compare = mapGnomesHeights.get(o2).compareTo(mapGnomesHeights.get(o1));
-            if (compare == 0) {
-                return 1;
-            } else {
-                return compare;
-            }
-        };
-        Comparator<Integer> comparePortions = (o1, o2) -> {
-            int compare = mapPortions.get(o2).compareTo(mapPortions.get(o1));
-            if (compare == 0) {
-                return 1;
-            } else {
-                return compare;
-            }
-        };
+        List entryList = new ArrayList(mapGnomesPortions.entrySet());
+        Collections.sort(entryList, (o1, o2) -> {
+            Map.Entry e1 = (Map.Entry) o1;
+            Map.Entry e2 = (Map.Entry) o2;
+            Comparable c1 = (Comparable) e1.getValue();
+            Comparable c2 = (Comparable) e2.getValue();
+            return c1.compareTo(c2);
+        });
 
-        Map<Integer, Integer> sortedGnomesHeight = new TreeMap<>(compareGnomesHeight);
-        sortedGnomesHeight.putAll(mapGnomesHeights);
-        System.out.println(sortedGnomesHeight);
-        Map<Integer, Integer> sortedPortions = new TreeMap<>(comparePortions);
-        sortedPortions.putAll(mapPortions);
-        System.out.println(sortedPortions);
-        int i = 0;
+        //int[] gnomesHeight = {5, 7, 6, 9, 4};
+        //int[] portion =      {8, 5, 6, 2, 3};
+        //int[] result =       {4, 2, 1, 0, 3};
+        System.out.println(entryList);
 
 
-
-        /*
-        Iterator iterGnomesHeights = mapGnomesHeights.values().iterator();
-        Iterator iterPortions = mapPortions.values().iterator();
-
-        while (sortedGnomesHeight.) {
-            int i = (int) iterGnomesHeights.next();
-            int j = (int) iterPortions.next();
-            result[i] = j;
-        }
-
-
- */
         return result;
     }
     /*public static int[] find(int[] gnomesHeight, int[] portion) {
