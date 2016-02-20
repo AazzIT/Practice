@@ -37,24 +37,4 @@ public class GnomeFood {
         System.out.println(Arrays.asList(result));
         return result;
     }
-    /*public static int[] find(int[] gnomesHeight, int[] portion) {
-        int[] result = new int[gnomesHeight.length];
-        Map<Integer, Integer> mapGnomesHeights = new TreeMap<>();
-        Map<Integer, Integer> mapPortions = new TreeMap<>();
-
-        for (int i = 0; i < gnomesHeight.length; i++) {
-            mapGnomesHeights.put(gnomesHeight[i], i);
-            mapPortions.put(portion[i], i);
-        }
-        Iterator iterGnomesHeights = mapGnomesHeights.values().iterator();
-        Iterator iterPortions = mapPortions.values().iterator();
-
-        while (iterGnomesHeights.hasNext()) {
-            int i = (int) iterGnomesHeights.next();
-            int j = (int) iterPortions.next();
-            result[i] = j;
-        }
-
-        return result;
-    }*/
 }
