@@ -15,7 +15,7 @@ public class GnomeFoodTest {
 
     }
 
-    @Test(timeout = 2)
+    @Test(timeout = 3)
     public void testFind2() throws Exception {
 
         int[] gnomesHeight = {3, };
