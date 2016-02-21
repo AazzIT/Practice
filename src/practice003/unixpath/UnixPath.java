@@ -3,7 +3,7 @@ package practice003.unixpath;
 import java.util.LinkedList;
 
 public class UnixPath {
-    public static String simplify(String input) {
+    public String simplify(String input) {
         LinkedList<String> path = new LinkedList<>();
         StringBuilder wordBuffer = new StringBuilder();
 
