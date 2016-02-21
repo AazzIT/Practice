@@ -11,7 +11,7 @@ public class GnomeFoodTest {
         int[] portion = {8, 5, 6, 2, 3};
         int[] result = {4, 2, 1, 0, 3};
 
-        Assert.assertArrayEquals(result, practice003.gnomefood.GnomeFood.find(gnomesHeight, portion));
+        Assert.assertArrayEquals(result, practice003.gnomefood1.GnomeFood.find(gnomesHeight, portion));
 
     }
 
@@ -22,7 +22,7 @@ public class GnomeFoodTest {
         int[] portion = {9, };
         int[] result = {0, };
 
-        Assert.assertArrayEquals(result, practice003.gnomefood.GnomeFood.find(gnomesHeight, portion));
+        Assert.assertArrayEquals(result, practice003.gnomefood1.GnomeFood.find(gnomesHeight, portion));
 
     }
 }

@@ -20,12 +20,12 @@ public class GnomeFood {
         }
 
         gnomes.entrySet().stream()
-                .sorted(Map.Entry.comparingByValue())
-                .forEachOrdered(System.out::println);
+                .sorted(Map.Entry.comparingByValue());
+                //.forEachOrdered(System.out::println);
 
         portions.entrySet().stream()
-                .sorted(Map.Entry.comparingByValue())
-                .forEachOrdered(System.out::println);
+                .sorted(Map.Entry.comparingByValue());
+                //.forEachOrdered(System.out::println);
 
         System.out.println(gnomes.toString());
         System.out.println(portions.toString());
