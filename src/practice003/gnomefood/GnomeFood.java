@@ -43,12 +43,14 @@ public class GnomeFood {
         }
     }
 
-    public static int[] find(int[] gnomesHeights, int[] portionWeights) {
-        int[] result = new int[portionWeights.length];
-        Gnome[] gnomes = new Gnome[gnomesHeights.length];
-        Portion[] portions = new Portion[gnomesHeights.length];
+    public int[] find(int[] gnomesHeights, int[] portionWeights) {
+        int gnomeHeightsLength = gnomesHeights.length;
+        int portionWeightsLength = portionWeights.length;
+        int[] result = new int[portionWeightsLength];
+        Gnome[] gnomes = new Gnome[gnomeHeightsLength];
+        Portion[] portions = new Portion[gnomeHeightsLength];
 
-        for (int i = 0; i < gnomesHeights.length; i++) {
+        for (int i = 0; i < gnomeHeightsLength; i++) {
             gnomes[i] = new Gnome(i, gnomesHeights[i]);
         }
 
@@ -58,7 +60,7 @@ public class GnomeFood {
 
         Arrays.sort(gnomes);
         Arrays.sort(portions);
-        for (int i = 0; i < portionWeights.length; i++) {
+        for (int i = 0; i < portionWeightsLength; i++) {
             result[gnomes[i].index] = portions[i].index;
         }
 

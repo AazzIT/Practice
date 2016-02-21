@@ -10,12 +10,12 @@ public class GnomeFoodTest {
         int[] gnomesHeight = {5, 7, 6, 9, 4};
         int[] portion = {8, 5, 6, 2, 3};
         int[] result = {4, 2, 1, 0, 3};
-
-        Assert.assertArrayEquals(result, GnomeFood.find(gnomesHeight, portion));
+        int[] portionsForGnomes = new GnomeFood.find(gnomesHeight, portion);
+        Assert.assertArrayEquals(result,portionsForGnomes);
 
     }
 
-    @Test(timeout = 3)
+    @Test(timeout = 2)
     public void testFind2() throws Exception {
 
         int[] gnomesHeight = {3, };
