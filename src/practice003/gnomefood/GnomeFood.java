@@ -21,11 +21,6 @@ public class GnomeFood {
                 return -1;
             }
         }
-
-        @Override
-        public String toString() {
-            return String.format("%d (%d)", height, index);
-        }
     }
 
     private static final class Portion implements Comparable<Portion>{
@@ -46,11 +41,6 @@ public class GnomeFood {
                 return -1;
             }
         }
-
-        @Override
-        public String toString() {
-            return String.format("%d (%d)", weight, index);
-        }
     }
 
     public static int[] find(int[] gnomesHeights, int[] portionWeights) {
@@ -68,13 +58,8 @@ public class GnomeFood {
 
         Arrays.sort(gnomes);
         Arrays.sort(portions);
-
-        System.out.println(Arrays.asList(gnomes));
-        System.out.println(Arrays.asList(portions));
-
         for (int i = 0; i < portionWeights.length; i++) {
             result[gnomes[i].index] = portions[i].index;
-            System.out.println(result[portions[i].index]);
         }
 
         return result;
