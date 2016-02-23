@@ -10,7 +10,7 @@ public class LongestStabilityPeriod {
         int maxPeriod = 1;
         int countOfTwoValue;
         int countLastValue;
-        System.out.println(lengthOfPeriod);
+        //System.out.println(lengthOfPeriod);
         if (lengthOfPeriod < 1) {
             return 0;
         } else if (lengthOfPeriod == 1) {
