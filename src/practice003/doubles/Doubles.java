@@ -37,7 +37,7 @@ public class Doubles {
                         data.addDigit(c - '0');
                         return NUMBER;
                     }
-                    return INVALIDE_END;
+                    return INVALID_END;
                 }
             }, NUMBER {
                 @Override
@@ -46,15 +46,15 @@ public class Doubles {
                         data.addDigit(c - '0');
                         return NUMBER;
                     }
-                    return INVALIDE_END;
+                    return INVALID_END;
                 }
-            }, VALIDE_END {
+            }, VALID_END {
                 @Override
                 public State next(char c, ParseData data) {
-                    if (c == ' ') return VALIDE_END;
-                    return INVALIDE_END;
+                    if (c == ' ') return VALID_END;
+                    return INVALID_END;
                 }
-            }, INVALIDE_END {
+            }, INVALID_END {
                 @Override
                 public State next(char c, ParseData data) {
                     return null;
