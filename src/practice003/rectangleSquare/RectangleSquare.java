@@ -13,7 +13,7 @@ public class RectangleSquare {
             if (h[i] > maxH) maxH = h[i];
             if (w[i] > maxW) maxW = w[i];
         }
-        grid = new int[ maxW][maxH];
+        grid = new int[maxX + maxW][maxH];
         for (int i = 0; i < x.length; i++) {
             drawRectangleInArray(x[i], h[i], w[i]);
         }
